@@ -37,9 +37,8 @@ class FindPair {
             return true;
  
         if (set.contains(sum - root.data)) {
-            System.out.println("Pair is found ("
-                               + (sum - root.data) + ", "
-                               + root.data + ")");
+            System.out.println("Sum = " + sum);
+            System.out.println("Pair is (" + (sum - root.data) + ", " + root.data + ")");
             return true;
         }
         else
@@ -51,7 +50,7 @@ class FindPair {
     static void findPair(Node root, int sum) {
         HashSet<Integer> set = new HashSet<Integer>();
         if (!findpairUtil(root, sum, set))
-            System.out.print("Pairs do not exit" + "\n");
+            System.out.print("Nodes are not found" + "\n");
     }
  
     // Driver code
